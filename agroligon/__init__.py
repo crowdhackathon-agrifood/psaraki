@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
@@ -19,6 +20,16 @@ def create_app():
     # Initialize SQLAlchemy ORM
     app.config['SQLALCHEMY_DATABASE_URI'] = db_file_loc
     db.init_app(app)
+
+    # Initialize login manager
+    login_manager = LoginManager()
+    login_manager.init_app(app)
+
+    from agroligon.models.user import User
+
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(int(user_id))
 
     # Register all app routes
     from agroligon import routes
