@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
@@ -12,6 +14,11 @@ def create_app():
     # Load configuration file from instance/ folder
     app.config.from_pyfile('config.py')
 
+    # We enable insecure transport for OAuth so we can
+    # connect with Facebook without errors about HTTPS on localhost
+    if app.debug:
+        os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+
     # Setup database SQLite3 file location
     db_prefix = 'sqlite:///'
     db_suffix = app.config['DB_FILE_NAME']
@@ -20,6 +27,9 @@ def create_app():
     # Initialize SQLAlchemy ORM
     app.config['SQLALCHEMY_DATABASE_URI'] = db_file_loc
     db.init_app(app)
+
+    # Initialize all models
+    from agroligon import models
 
     # Register custom commands
     from agroligon import commands
