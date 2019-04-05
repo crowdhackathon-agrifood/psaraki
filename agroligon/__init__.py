@@ -21,6 +21,10 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = db_file_loc
     db.init_app(app)
 
+    # Register custom commands
+    from agroligon import commands
+    commands.init_commands(app)
+
     # Initialize login manager
     login_manager = LoginManager()
     login_manager.init_app(app)
