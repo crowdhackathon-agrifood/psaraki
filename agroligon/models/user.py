@@ -13,3 +13,8 @@ class User(UserMixin, db.Model):
     name = db.Column(db.String(256), unique=True)
     email = db.Column(db.String(254), unique=True)
     picture = db.Column(db.Text())
+
+    phone = db.Column(db.Integer())
+    role = db.Column(db.Enum('customer', 'producer'))
+    points = db.Column(db.Integer())
+    created_at = db.Column(db.DateTime(), default=db.func.now())
