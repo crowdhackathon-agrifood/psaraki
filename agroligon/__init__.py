@@ -5,8 +5,7 @@ def create_app():
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_pyfile('config.py')
 
-    @app.route('/')
-    def index():
-        return 'Hello World'
+    from agroligon import routes
+    routes.init_routes(app)
 
     return app
