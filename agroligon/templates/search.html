@@ -6,7 +6,7 @@
     <div class="container">
         <div class="jumbotron">
             <div class="text-center mb-5">
-                <h4>Ψάχνω <strong>Τσιπούρα</strong> και βρίσκομαι στο <strong>Παγκράτι</strong></h4>
+                <h4>Ψάχνω <strong>Σφυρίδα</strong> και βρίσκομαι στο <strong>Παγκράτι</strong></h4>
                 <h4>Θέλω <strong>3 κιλά</strong> και να είναι <strong>καθαρισμένα</strong></h4>
             </div>
             <div class="d-flex align-items-baseline">
@@ -19,12 +19,13 @@
                     <i class="fas fa-user-lock fa-3x mr-3 text-primary"></i>
                     <div class="media-body">
                         <h5 class="mt-0 mb-3">Γιάννης Παπαγεωργίου</h5>
-                        <div class="d-flex font-weight-bold mb-4">
+                        <div class="d-flex font-weight-bold  mb-4">
                             <div class="mr-4"><i class="fas fa-check-circle mr-1"></i>Πιστοποιημένος</div>
                             <div class="mr-4"><i class="fas fa-star mr-1"></i>192 σκορ ποιότητας</div>
                             <div class="mr-4"><i class="fas fa-phone mr-1"></i>2103844423</div>
                             <div><i class="fas fa-city mr-1"></i>Πειραιάς</div>
                         </div>
+                        <p><strong>Σημερινή Ψαριά</strong></p>
 
                         <div class="d-flex mb-4">
                             <img src="{{ url_for('static', filename='images/fish1.jpg') }}" class="fish-image mr-3">
@@ -33,23 +34,26 @@
                         </div>
 
 
+                        <p class="mb-0">Σφυρίδα</p>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 42%">42%</div>
+                        </div>
+                        <p class="mb-0">Χταπόδι</p>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 35%">35%</div>
+                        </div>
                         <p class="mb-0">Τσιπούρα</p>
-                        <div class="progress mb-3">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 47%">47%</div>
-                        </div>
-                        <p class="mb-0">Λούτσος</p>
-                        <div class="progress mb-3">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 32%">32%</div>
-                        </div>
-                        <p class="mb-0">Γόπα</p>
                         <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" style="width: 39%">39%</div>
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 23%">23%</div>
                         </div>
                         <div class="d-flex align-items-baseline">
                             <div class="mt-4">Εξυπηρέτησε <strong>38 παραγγελίες</strong> παρόμοιες με τη δική σας.
                             </div>
                             <a href="#" class="btn btn-primary ml-auto">
                                 <i class="fab fa-facebook-messenger mr-2"></i>Messenger
+                            </a>
+                            <a href="{{ url_for('home.payment') }}" class="btn btn-success ml-2">
+                                <i class="fas fa-business-time mr-2"></i>Τοποθέτηση Παραγγελίας
                             </a>
                         </div>
                     </div>
@@ -62,33 +66,36 @@
                         <div class="d-flex font-weight-bold mb-4">
                             <div class="mr-4"><i class="fas fa-check-circle mr-1"></i>Πιστοποιημένος</div>
                             <div class="mr-4"><i class="fas fa-star mr-1"></i>112 σκορ ποιότητας</div>
-                            <div class="mr-4"><i class="fas fa-phone mr-1"></i>2103844423</div>
+                            <div class="mr-4"><i class="fas fa-phone mr-1"></i>2103825127</div>
                             <div><i class="fas fa-city mr-1"></i>Πειραιάς</div>
                         </div>
-
+                        <p><strong>Σημερινή Ψαριά</strong></p>
                         <div class="d-flex mb-4">
                             <img src="{{ url_for('static', filename='images/fish3.jpg') }}" class="fish-image mr-3">
                             <img src="{{ url_for('static', filename='images/fish1.jpg') }}" class="fish-image mr-3">
                             <img src="{{ url_for('static', filename='images/fish2.jpg') }}" class="fish-image mr-3">
                         </div>
 
-                        <p class="mb-0">Τσιπούρα</p>
+                        <p class="mb-0">Χταπόδι</p>
                         <div class="progress mb-3">
                             <div class="progress-bar bg-success" role="progressbar" style="width: 38%">38%</div>
                         </div>
-                        <p class="mb-0">Μουρμούρα</p>
+                        <p class="mb-0">Πεσκανδρίτσα</p>
                         <div class="progress mb-3">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 62%">62%</div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 32%">32%</div>
                         </div>
                         <p class="mb-0">Αθερίνα</p>
                         <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" style="width: 31%">31%</div>
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 30%">30%</div>
                         </div>
                         <div class="d-flex align-items-baseline">
                             <div class="mt-4">Εξυπηρέτησε <strong>16 παραγγελίες</strong> παρόμοιες με τη δική σας.
                             </div>
                             <a href="#" class="btn btn-primary ml-auto">
                                 <i class="fab fa-facebook-messenger mr-2"></i>Messenger
+                            </a>
+                            <a href="{{ url_for('home.payment') }}" class="btn btn-success ml-2">
+                                <i class="fas fa-business-time mr-2"></i>Τοποθέτηση Παραγγελίας
                             </a>
                         </div>
                     </div>
@@ -100,9 +107,6 @@
                 <div class="mt-4 text-secondary">
                     Η παραγγελία θα σταλεί στους παραγωγούς που μπορούν να σας εξυπηρετήσουν.
                 </div>
-                <a href="{{ url_for('home.payment') }}" class="btn btn-success ml-auto">
-                    <i class="fas fa-business-time mr-2"></i>Τοποθέτηση Παραγγελίας
-                </a>
             </div>
 
         </div>
