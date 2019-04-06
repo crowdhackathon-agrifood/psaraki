@@ -47,14 +47,14 @@ def facebook_logged_in(blueprint, token):
             token=token
         )
 
-        if oauth.user:
-            login_user(oauth.user)
-        else:
-            user = User(
-                name=info['name'],
-                email=info['email'],
-                picture=info['picture']['data']['url']
-            )
+    if oauth.user:
+        login_user(oauth.user)
+    else:
+        user = User(
+            name=info['name'],
+            email=info['email'],
+            picture=info['picture']['data']['url']
+        )
 
         oauth.user = user
 

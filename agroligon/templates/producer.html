@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Επισκόπηση{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="jumbotron">
+            <li class="media">
+                <img src="{{ current_user.picture }}" alt="" class="mr-3">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-3">{{ current_user.name }}</h5>
+                    <div class="d-inline-flex font-weight-bold">
+                        <div class="mr-4"><i class="fas fa-star mr-1"></i>234 σκορ ποιότητας</div>
+                        <div class="mr-4"><i class="fas fa-phone mr-1"></i>2103844423</div>
+                        <div class="mr-4"><i class="fas fa-map-signs mr-1"></i>Αττική</div>
+                        <div><i class="fas fa-city mr-1"></i>Αθήνα</div>
+                    </div>
+                </div>
+            </li>
+
+            <h4 class="mt-5 mb-3">Αιτήματα Παραγγελιών</h4>
+            <table class="table table-striped">
+                <thead class="bg-primary text-white">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Πελάτης</th>
+                    <th scope="col">Ψάρι</th>
+                    <th scope="col">Ποσότητα</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+{% endblock %}
