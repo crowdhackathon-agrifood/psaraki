@@ -1,10 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}Πληρωμή{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="jumbotron pt-5 pb-5">
+            <h3>Παραγγελία & Πληρωμή</h3>
+            <hr class="mb-4">
+            <div class="d-flex flex-column align-items-center mt-4 mb-4">
+                <h4 class="mb-4">Παραγωγός</h4>
+                <li class="media">
+                    <i class="fas fa-user-lock fa-3x mr-3 text-primary"></i>
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-3">Γιάννης Παπαγεωργίου</h5>
+                        <div class="d-inline-flex font-weight-bold mb-4">
+                            <div class="mr-4"><i class="fas fa-star mr-1"></i>192 σκορ ποιότητας</div>
+                            <div class="mr-4"><i class="fas fa-phone mr-1"></i>2103844423</div>
+                            <div class="mr-4"><i class="fas fa-map-signs mr-1"></i>Αττική</div>
+                            <div><i class="fas fa-city mr-1"></i>Ηλιούπολη</div>
+                        </div>
+                    </div>
+                </li>
+                <i class="fas fa-cart-arrow-down fa-3x mt-4 mb-4"></i>
+                <h4 class="mb-4">Καταναλωτής</h4>
+                <li class="media">
+                    <i class="fas fa-user-lock fa-3x mr-3 text-primary"></i>
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-3">Κώστας Αναστασόπουλος</h5>
+                        <div class="d-inline-flex font-weight-bold mb-4">
+                            <div class="mr-4"><i class="fas fa-star mr-1"></i>112 σκορ ποιότητας</div>
+                            <div class="mr-4"><i class="fas fa-phone mr-1"></i>2103844423</div>
+                            <div class="mr-4"><i class="fas fa-map-signs mr-1"></i>Αττική</div>
+                            <div><i class="fas fa-city mr-1"></i>Περιστέρι</div>
+                        </div>
+                    </div>
+                </li>
+            </div>
+            <table class="table table-striped">
+                <thead class="bg-primary text-white">
+                <tr>
+                    <th scope="col">Ημερομηνία</th>
+                    <th scope="col">Αναλυτική Παραγγελία</th>
+                    <th scope="col">Συνολικά Κιλά</th>
+                    <th scope="col">Επιπλέον Χρεώσεις</th>
+                    <th>Συνολικό Κόστος</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">04/06/2019</th>
+                    <td>Σφυρίδα, Στήρα, Πεσκανδρίτσα</td>
+                    <td>10kg</td>
+                    <td>Καθάρσιμα(+ 2&euro;)</td>
+                    <td>130&euro;</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+{% endblock %}
