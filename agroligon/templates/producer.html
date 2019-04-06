@@ -4,9 +4,9 @@
 
 {% block body %}
     <div class="container">
-        <div class="jumbotron p-4">
-            <h3 class="mb-4">Παραγωγός</h3>
-            <hr>
+        <div class="jumbotron pt-5 pb-5">
+            <h3>Παραγωγός</h3>
+            <hr class="mb-4">
             <li class="media">
                 <img src="{{ current_user.picture }}" alt="" class="mr-3">
                 <div class="media-body">
@@ -19,39 +19,123 @@
                     </div>
                 </div>
             </li>
+            <div class="alert alert-primary d-flex align-items-baseline m-0 mt-5" role="alert">
+                <div>
+                    <i class="fas fa-fish mr-2"></i>O Γιώργος Θεοφιλόπουλος θέλει <strong>10kg Σφυρίδα</strong> και
+                    <strong>5kg Πεσκανδρίτσα</strong> στην Αθήνα.
+                </div>
+                <a href="#" class="btn btn-success ml-auto">
+                    <i class="fas fa-check mr-2"></i>Αποδοχή παραγγελίας
+                </a>
+            </div>
+        </div>
 
-            <h4 class="mt-5 mb-3">Αιτήματα Παραγγελιών</h4>
+        <div class="jumbotron pt-5 pb-5">
+            <h5>Παραγγελίες</h5>
+            <hr class="mb-4">
+
             <table class="table table-striped">
                 <thead class="bg-primary text-white">
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Πελάτης</th>
-                    <th scope="col">Ψάρι</th>
-                    <th scope="col">Ποσότητα</th>
+                    <th scope="col">Ημερομηνία</th>
+                    <th scope="col">Αναλυτικά</th>
+                    <th scope="col">Συνολικά Κιλά</th>
+                    <th scope="col">Επιπλέον Χρεώσεις</th>
+                    <th>Συνολικό Κόστος</th>
+                    <th>Κατάσταση</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th scope="row">04/06/2019</th>
+                    <td>Σφυρίδα, Στήρα, Πεσκανδρίτσα</td>
+                    <td>10kg</td>
+                    <td>Καθάρσιμα(+ 2&euro;)</td>
+                    <td>130&euro;</td>
+                    <td>
+                        <a href="#" class="btn btn-primary btn-block">
+                            <i class="fas fa-times mr-2"></i>Ακύρωση
+                        </a>
+                    </td>
                 </tr>
                 <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    <th scope="row">04/04/2019</th>
+                    <td>Συναγρίδα, Ροφός</td>
+                    <td>10kg</td>
+                    <td>Καθάρσιμα(+ 2&euro;)</td>
+                    <td>130&euro;</td>
+                    <td>
+                        <a href="#" class="btn btn-primary btn-block disabled">
+                            <i class="fas fa-check mr-2"></i>Ολοκληρώθηκε
+                        </a>
+                    </td>
                 </tr>
                 <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
+                    <th scope="row">03/28/2019</th>
+                    <td>Τσιπούρα, Συκιός, Σαργός</td>
+                    <td>10kg</td>
+                    <td>Καθάρσιμα(+ 2&euro;)</td>
+                    <td>130&euro;</td>
+                    <td>
+                        <a href="#" class="btn btn-primary btn-block disabled">
+                            <i class="fas fa-check mr-2"></i>Ολοκληρώθηκε
+                        </a>
+                    </td>
                 </tr>
                 </tbody>
             </table>
 
         </div>
+
+        <div class="jumbotron pt-5 pb-5">
+            <h5>Πωλήσεις</h5>
+            <hr class="mb-4">
+            <canvas id="line-chart" width="800" height="450"></canvas>
+
+        </div>
     </div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+                labels: [1500, 1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 2050],
+                datasets: [{
+                    data: [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478],
+                    label: "Africa",
+                    borderColor: "#3e95cd",
+                    fill: false
+                }, {
+                    data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267],
+                    label: "Asia",
+                    borderColor: "#8e5ea2",
+                    fill: false
+                }, {
+                    data: [168, 170, 178, 190, 203, 276, 408, 547, 675, 734],
+                    label: "Europe",
+                    borderColor: "#3cba9f",
+                    fill: false
+                }, {
+                    data: [40, 20, 10, 16, 24, 38, 74, 167, 508, 784],
+                    label: "Latin America",
+                    borderColor: "#e8c3b9",
+                    fill: false
+                }, {
+                    data: [6, 3, 2, 2, 7, 26, 82, 172, 312, 433],
+                    label: "North America",
+                    borderColor: "#c45850",
+                    fill: false
+                }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'World population per region (in millions)'
+                }
+            }
+        });
+    </script>
 {% endblock %}
