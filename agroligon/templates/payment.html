@@ -5,58 +5,115 @@
 {% block body %}
     <div class="container">
         <div class="jumbotron pt-5 pb-5">
-            <h3>Παραγγελία & Πληρωμή</h3>
+            <h3><i class="fab fa-bitcoin mr-2"></i>Smart Contract</h3>
             <hr class="mb-4">
-            <div class="d-flex flex-column align-items-center mt-4 mb-4">
-                <h4 class="mb-4">Παραγωγός</h4>
-                <li class="media">
-                    <i class="fas fa-user-lock fa-3x mr-3 text-primary"></i>
-                    <div class="media-body">
-                        <h5 class="mt-0 mb-3">Γιάννης Παπαγεωργίου</h5>
-                        <div class="d-inline-flex font-weight-bold mb-4">
-                            <div class="mr-4"><i class="fas fa-star mr-1"></i>192 σκορ ποιότητας</div>
-                            <div class="mr-4"><i class="fas fa-phone mr-1"></i>2103844423</div>
-                            <div class="mr-4"><i class="fas fa-map-signs mr-1"></i>Αττική</div>
-                            <div><i class="fas fa-city mr-1"></i>Ηλιούπολη</div>
-                        </div>
+
+            <h4 class="mb-4">Παραγωγός</h4>
+
+            <li class="media">
+                <i class="fas fa-user-lock fa-3x mr-3 text-primary"></i>
+                <div class="media-body">
+                    <h5 class="mt-0 mb-3">Γιάννης Παπαγεωργίου</h5>
+                    <div class="d-inline-flex font-weight-bold mb-4">
+                        <div class="mr-4"><i class="fas fa-star mr-1"></i>192 σκορ ποιότητας</div>
+                        <div class="mr-4"><i class="fas fa-phone mr-1"></i>2103844423</div>
+                        <div><i class="fas fa-city mr-1"></i>Πειραιάς</div>
                     </div>
-                </li>
-                <i class="fas fa-cart-arrow-down fa-3x mt-4 mb-4"></i>
-                <h4 class="mb-4">Καταναλωτής</h4>
-                <li class="media">
-                    <i class="fas fa-user-lock fa-3x mr-3 text-primary"></i>
-                    <div class="media-body">
-                        <h5 class="mt-0 mb-3">Κώστας Αναστασόπουλος</h5>
-                        <div class="d-inline-flex font-weight-bold mb-4">
-                            <div class="mr-4"><i class="fas fa-star mr-1"></i>112 σκορ ποιότητας</div>
-                            <div class="mr-4"><i class="fas fa-phone mr-1"></i>2103844423</div>
-                            <div class="mr-4"><i class="fas fa-map-signs mr-1"></i>Αττική</div>
-                            <div><i class="fas fa-city mr-1"></i>Περιστέρι</div>
-                        </div>
+                </div>
+            </li>
+
+            <h4 class="mb-4 mt-4">Καταναλωτής</h4>
+
+            <li class="media">
+                <i class="fas fa-user-lock fa-3x mr-3 text-primary"></i>
+                <div class="media-body">
+                    <h5 class="mt-0 mb-3">Κώστας Αναστασόπουλος</h5>
+                    <div class="d-inline-flex font-weight-bold mb-4">
+                        <div class="mr-4"><i class="fas fa-star mr-1"></i>112 σκορ ποιότητας</div>
+                        <div class="mr-4"><i class="fas fa-phone mr-1"></i>2103844423</div>
+                        <div><i class="fas fa-city mr-1"></i>Παγκράτι</div>
                     </div>
-                </li>
-            </div>
+                </div>
+            </li>
+        </div>
+
+        <div class="jumbotron pt-5 pb-5">
+            <h5><i class="fas fa-fish mr-2"></i>Προϊόν</h5>
+            <hr class="mb-4">
+
             <table class="table table-striped">
                 <thead class="bg-primary text-white">
                 <tr>
-                    <th scope="col">Ημερομηνία</th>
-                    <th scope="col">Αναλυτική Παραγγελία</th>
-                    <th scope="col">Συνολικά Κιλά</th>
-                    <th scope="col">Επιπλέον Χρεώσεις</th>
-                    <th>Συνολικό Κόστος</th>
+                    <th scope="col">Προϊόν</th>
+                    <th scope="col">Κιλά</th>
+                    <th scope="col">Πρόσθετες Υπηρεσίες</th>
+                    <th>Κόστος</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <th scope="row">04/06/2019</th>
-                    <td>Σφυρίδα, Στήρα, Πεσκανδρίτσα</td>
+                    <td>Σφυρίδα</td>
+                    <td>3kg</td>
+                    <td>Καθάρισμα</td>
+                    <td>22.00&euro;</td>
+                </tr>
+                <tr>
+                    <td>Στήρα</td>
+                    <td>5kg</td>
+                    <td>Καθάρισμα</td>
+                    <td>35.00&euro;</td>
+                </tr>
+                                <tr>
+                    <td>Πεσκανδρίτσα</td>
+                    <td>2kg</td>
+                    <td>Καθάρισμα</td>
+                    <td>14.00&euro;</td>
+                </tr>
+                <tr>
+                    <td><strong>Σύνολο</strong></td>
                     <td>10kg</td>
-                    <td>Καθάρσιμα(+ 2&euro;)</td>
-                    <td>130&euro;</td>
+                    <td></td>
+                    <td><strong>77.00 (+2) &euro;</strong></td>
                 </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="jumbotron pt-5 pb-5">
+            <h5><i class="fas fa-truck mr-2"></i>Διαδρομή</h5>
 
+            <hr class="mb-4">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <img src="{{ url_for('static', filename='images/route.png') }}" alt="" class="img-thumbnail">
+                    </div>
+                    <div class="col-lg-3">
+                        <ul class="list-group">
+                            <li class="list-group-item text-primary"><strong>Διανομή:</strong> Uber Eats</li>
+                            <li class="list-group-item"><strong>Από:</strong> Λιμάνι Πειραιά</li>
+                            <li class="list-group-item"><strong>Προς:</strong> Παγκράτι</li>
+                            <li class="list-group-item"><strong>Απόσταση:</strong> 14km</li>
+                            <li class="list-group-item"><strong>Μεταφορικά:</strong> 1.20&euro;</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron pt-5 pb-5">
+            <h5><i class="fas fa-money-check-alt mr-2"></i>Ηλεκτρονική πληρωμή</h5>
+
+            <hr class="mb-4">
+
+            <div class="text-center">
+                <p class="mb-4">Ολοκλήρωση πληρωμής με σύναψη Smart Contract</p>
+                <p class="mb-4">Τυχόν αποτυχία μεταφοράς ή καθυστέρηση μιας βδομάδας οδηγεί στην ακύρωση του
+                    συμβολαίου</p>
+                <p class="mb-4">Για τη προστασία της παραγγελίας, το συμβόλαιο θα εισαχθεί στο Blockchain</p>
+
+                <a href="#" class="btn btn-lg btn-success">Πληρωμή και σύναψη Smart Contract</a>
+            </div>
         </div>
     </div>
 {% endblock %}

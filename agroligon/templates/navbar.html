@@ -11,9 +11,15 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ url_for('home.index') }}">Αρχική <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Εξερεύνηση</a>
-                </li>
+                {% if current_user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home.producer') }}">Παραγωγός</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home.consumer') }}">Καταναλωτής</a>
+                    </li>
+                {% endif %}
+
             </ul>
             {% if current_user.is_authenticated %}
                 <a class="btn btn-outline-light my-2 my-sm-0" href="{{ url_for('auth.logout') }}">
