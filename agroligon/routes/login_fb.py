@@ -12,7 +12,7 @@ from agroligon.models.user import User
 blueprint = make_facebook_blueprint(
     storage=SQLAlchemyStorage(OAuth, db.session, user=current_user),
     scope='email',
-    redirect_to='home.index'
+    redirect_to='home.producer'
 )
 
 

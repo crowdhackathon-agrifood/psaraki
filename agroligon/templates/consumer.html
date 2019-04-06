@@ -4,8 +4,22 @@
 
 {% block body %}
     <div class="container">
-        <div class="jumbotron">
-            <div class="text-center mb-5">
+        <div class="jumbotron p-4">
+            <h3 class="mb-4">Καταναλωτής</h3>
+            <hr>
+            <li class="media">
+                <img src="{{ current_user.picture }}" alt="" class="mr-3">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-3">{{ current_user.name }}</h5>
+                    <div class="d-inline-flex font-weight-bold">
+                        <div class="mr-4"><i class="fas fa-star mr-1"></i>234 σκορ ποιότητας</div>
+                        <div class="mr-4"><i class="fas fa-phone mr-1"></i>2103844423</div>
+                        <div class="mr-4"><i class="fas fa-map-signs mr-1"></i>Αττική</div>
+                        <div><i class="fas fa-city mr-1"></i>Αθήνα</div>
+                    </div>
+                </div>
+            </li>
+            <div class="text-center mb-5 mt-5">
                 <h4>Οι <strong>τελευταίες</strong> παραγγελίες σου!</h4>
             </div>
             <table class="table table-striped">
