@@ -17,6 +17,9 @@ def search():
 def producer():
     return render_template('producer.html')
 
+@blueprint.route('/consumer')
+def consumer():
+    return render_template('consumer.html')
 
 @blueprint.route('/payment')
 def payment():

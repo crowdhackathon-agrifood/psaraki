@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Ιστορικό Παραγγελιών{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="jumbotron">
+            <div class="text-center mb-5">
+                <h4>Οι <strong>τελευταίες</strong> παραγγελίες σου!</h4>
+            </div>
+            <table class="table table-striped">
+                <thead class="bg-primary text-white">
+                <tr>
+                    <th scope="col">Ημερομηνία</th>
+                    <th scope="col">Αναλυτική Παραγγελία</th>
+                    <th scope="col">Συνολικά Κιλά</th>
+                    <th scope="col">Επιπλέον Χρεώσεις</th>
+                    <th>Συνολικό Κόστος</th>
+                    <th>Κατάσταση Παραγγελίας</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">04/06/2019</th>
+                    <td>Σφυρίδα, Στήρα, Πεσκανδρίτσα</td>
+                    <td>10kg</td>
+                    <td>Καθάρσιμα(+ 2&euro;)</td>
+                    <td>130&euro;</td>
+                    <td class="text-primary">Εκρεμεί...</td>
+                </tr>
+                <tr>
+                    <th scope="row">04/04/2019</th>
+                    <td>Συναγρίδα, Ροφός</td>
+                    <td>10kg</td>
+                    <td>Καθάρσιμα(+ 2&euro;)</td>
+                    <td>130&euro;</td>
+                    <td class="text-success">Ολοκληρώθηκε</td>
+                </tr>
+                <tr>
+                    <th scope="row">03/28/2019</th>
+                    <td>Τσιπούρα, Συκιός, Σαργός</td>
+                    <td>10kg</td>
+                    <td>Καθάρσιμα(+ 2&euro;)</td>
+                    <td>130&euro;</td>
+                    <td class="text-success">Ολοκληρώθηκε</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+{% endblock %}
