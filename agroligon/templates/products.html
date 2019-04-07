@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block title %}Προϊόντα{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="jumbotron pt-5 pb-5">
+            <h3><i class="fas fa-fish mr-2"></i>Τι ψάρια ψάσατε σήμερα;</h3>
+            <hr class="mb-4">
+
+            <div class="container">
+                <div class="row mb-2">
+                    <div class="col">
+                        <strong>Τύπος ψαριού</strong>
+                    </div>
+                    <div class="col-sm-3">
+                        <strong>Περιοχή αλιείας</strong>
+                    </div>
+                    <div class="col-sm-3">
+                        <strong>Ποσότητα</strong>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <select class="form-control">
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="form-control">
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" value="...">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <select class="form-control">
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="form-control">
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" value="...">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <select class="form-control">
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <select class="form-control">
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" value="...">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-auto ml-auto">
+                        <a href="#" class="btn btn-success"><i class="fas fa-plus mr-2"></i>Προσθήκη Προϊόντος</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="jumbotron pt-5 pb-5">
+            <h5><i class="fas fa-calendar mr-2"></i>Ημερολόγιο Αλιείας</h5>
+            <hr class="mb-4">
+
+            <p>Αυτοματοποιήστε τη διαδικασία αυτή συσχετίζοντας τον λογαριασμό σας
+                με το <strong>Ολοκληρωμένο Σύστημα Παρακολούθηση και Καταγραφής Αλιευτικών Δραστηριοτήτων</strong>.</p>
+
+            <p>Με τη δική σας συγκατάθεση, τα δεδομένα που εισάγεται στο ημερολόγιο αλιείας του Υπουργείου Αγροτικής
+                Ανάπτυξης και Τροφίμων θα μεταφέρονται αυτόματα στο frescopsaraki.gr.</p>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-auto ml-auto">
+                        <a href="#" class="btn btn-success">
+                            <i class="fas fa-plus mr-2"></i>Σύνδεση με το Ημερολόγιο Αλιείας</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron pt-5 pb-5">
+            <h5><i class="fas fa-water mr-2"></i>Εβδομαδιαία Στατιστκά</h5>
+            <hr class="mb-4">
+
+            <canvas id="doughnut-chart" width="800" height="450"></canvas>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        new Chart(document.getElementById("doughnut-chart"), {
+            type: 'doughnut',
+            data: {
+                labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+                datasets: [
+                    {
+                        label: "Population (millions)",
+                        backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+                        data: [2478, 5267, 734, 784, 433]
+                    }
+                ]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Predicted world population (millions) in 2050'
+                }
+            }
+        });
+    </script>
+{% endblock %}
