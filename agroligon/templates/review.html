@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}Αξιολόγηση Παραγωγού{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="jumbotron pt-5 pb-5">
+            <h3><i class="fas fa-edit mr-2"></i>Αξιολόγηση Παραγωγού</h3>
+            <hr class="mb-4">
+            <li class="media">
+                <img src="{{ current_user.picture }}" alt="" class="mr-3">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-3">{{ current_user.name }}</h5>
+                    <div class="d-inline-flex font-weight-bold">
+                        <div class="mr-4"><i class="fas fa-star mr-1"></i>234 σκορ αξιοπιστίας</div>
+                        <div class="mr-4"><i class="fas fa-phone mr-1"></i>2103844423</div>
+                        <div><i class="fas fa-city mr-1"></i>Αθήνα</div>
+                    </div>
+                </div>
+            </li>
+
+            <p class="mt-4 mb-1"><strong>Φρεσκότητα</strong></p>
+            <p class="text-primary">
+                <i class="fas fa-star mr-2"></i>
+                <i class="fas fa-star mr-2"></i>
+                <i class="fas fa-star mr-2"></i>
+                <i class="fas fa-star mr-2"></i>
+                <i class="fas fa-star mr-2"></i>
+            </p>
+
+            <p class="mt-4 mb-1"><strong>Συνεργασία</strong></p>
+            <p class="text-primary">
+                <i class="fas fa-star mr-2"></i>
+                <i class="fas fa-star mr-2"></i>
+                <i class="fas fa-star mr-2"></i>
+                <i class="fas fa-star mr-2"></i>
+                <i class="far fa-star mr-2"></i>
+            </p>
+
+
+            <p class="mt-4 mb-1"><strong>Χρόνος Παραλαβής</strong></p>
+            <p class="text-primary">
+                <i class="fas fa-star mr-2"></i>
+                <i class="fas fa-star mr-2"></i>
+                <i class="fas fa-star mr-2"></i>
+                <i class="fas fa-star mr-2"></i>
+                <i class="far fa-star mr-2"></i>
+            </p>
+
+            <div class="form-group mt-4">
+                <label for="text1">
+                    <strong>Ποια είναι η γενική σας γνώμη για το προϊόν;</strong>
+                </label>
+                <textarea class="form-control" id="text1" rows="3"></textarea>
+            </div>
+
+            <div class="d-flex">
+                <a href="{{ url_for('home.products') }}" class="btn btn-success ml-auto">
+                    <i class="fas fa-plus mr-2"></i>Υποβολή Αξιολόγησης
+                </a>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

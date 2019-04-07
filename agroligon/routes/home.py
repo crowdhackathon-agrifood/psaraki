@@ -20,11 +20,6 @@ def producer():
     return render_template('producer.html')
 
 
-@blueprint.route('/producer_registration')
-def producer_registration():
-    return render_template('producer_registration.html')
-
-
 @blueprint.route('/consumer')
 @login_required
 def consumer():
@@ -41,3 +36,9 @@ def payment():
 @login_required
 def products():
     return render_template('products.html')
+
+
+@blueprint.route('/review')
+@login_required
+def review():
+    return render_template('review.html')
